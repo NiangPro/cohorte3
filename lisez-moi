@@ -1,9 +1,17 @@
+Lundi 09 Janvier 2023
+        chemin ----> /
+               - liens.html
+               - listes.html
+       chemin ----> /exos/
+               - exoliste1.html
+               - exoliste2.html
 Vendredi 06 Janvier 2023
- chemin ----> cohorte3
-        - bloc.html
-        - inline.html
-        - exo1.html
-        - liens.html
+        chemin ----> /
+               - bloc.html
+               - inline.html
+               - liens.html
+       chemin ----> /exos/
+               - exo1.html
 Mercredi 04 Janvier 2023
- chemin ----> cohorte3
-        - index.html
+        chemin ----> cohorte3
+               - index.html
