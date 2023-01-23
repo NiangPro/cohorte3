@@ -1,0 +1,17 @@
+#titre{
+	color: darkgoldenrod;
+	font-weight: bold;
+	font-style: italic;
+	text-decoration: underline;
+/*	background: cyan;*/
+	font-size: 38px;
+	text-shadow: 10px 10px 5px #ccc; 
+	font-family: verdana;
+	opacity: 1;
+	text-indent: 5%;
+	border: 10px double #000;
+/*	border-radius: 0px 20px 0px 20px;*/
+	border-radius: 20px 0px 60px;
+/*border-top-left-radius: 20px;
+border-bottom-right-radius: 20px;*/
+}
