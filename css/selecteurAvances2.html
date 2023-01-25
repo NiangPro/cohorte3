@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Selecteur avances</title>
+	<style>
+		label, input[type="text"], input[type="email"]{
+			display: block;
+			margin: 20px;
+		}
+
+		input[type="text"], input[type="email"]{
+			height: 30px;
+			width: 200px;
+			padding-left: 15px;
+			border-radius: 15px;
+			border-color: green;
+			border-style: inset;
+			border-width: 5px;
+			outline: none;
+		}
+
+		input[type="submit"],input[type="reset"]{
+			margin-left: 20px;
+			background: green;
+			border: none;
+			border-radius: 15px;
+			color: white;
+			padding: 5px;
+			cursor: pointer;
+		}
+		input[type="reset"]{
+			background: red;
+		}
+
+		input[type="submit"]:hover{
+			background: skyblue;
+			color: black;
+		}
+
+		input[type="reset"]:hover{
+			background: darkred;
+			color: black;
+		}
+	</style>
+</head>
+<body>
+	<form action="">
+		<label for="">Prenom</label>
+		<input type="text" placeholder="Entrer votre prenom">
+		<label for="">Email</label>
+		<input type="email" placeholder="Entrer votre adresse email">
+		<input type="submit" value="Ajouter">
+		<input type="reset" value="Annuler">
+	</form>
+</body>
+</html>
