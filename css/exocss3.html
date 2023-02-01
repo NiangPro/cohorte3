@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Correction de l'exercice sur les formulaires</title>
+	<style>
+		#boites{
+			border: 1px solid #000;
+			height: 500px;
+			width: 400px;
+			position: relative;
+			background-image: url(../images/nuage.jpeg);
+			background-repeat: no-repeat;
+			background-size: contain;
+		}
+
+		#boite1, #boite2, #boite3{
+			width: 100px;
+			height: 200px;
+			border: 1px solid #000;
+		}
+
+		#boite1{
+			background: red;
+			z-index: 5;
+		}
+
+		#boite3{
+			position: absolute;
+			top: 5%;
+			right: -10%;
+			background: greenyellow;
+			z-index: -5;
+		}
+		#global{
+			width: 300px;
+			height: 450px;
+			border-radius: 10px;
+			margin: auto;
+			margin-top: 40px;
+			box-shadow: 5px 6px 5px 5px #ccc;
+		}
+
+		#entete{
+			width: inherit;
+			height: 20%;
+			border-radius: 10px 10px 0px 0px;
+			background: url(../images/nuage.jpeg);
+			position: relative;
+		}
+
+		#entete img{
+			width: 100px;
+			height: 70px;
+			position: absolute;
+			left: 32%;
+			top: 40px;
+			border: 5px solid #fff;
+			border-radius: 50%;
+		}
+
+		form{
+			padding: 20px;
+			margin-top: 10px;
+			height: 70%;
+		}
+
+		form h4{
+			color: blue;
+			text-align: center;
+		}
+
+		form input{
+			padding: 8px;
+			margin-bottom: 20px;
+			width: 90%;
+			border-radius: 5px;
+			border: none;
+			background: rgb(238, 243, 243);
+			padding-left: 10px;
+			box-shadow: 0px 5px 5px #ccc;
+
+		}
+
+		button{
+			padding: 7px;
+			height: 35px;
+			background: url("../images/nuage.jpeg");
+			color: white;
+			width: 110px;
+			border: none;
+			border-radius: 15px;
+			font-weight: bold;
+			transform: translateX(70%);
+		}
+
+		p{
+			text-align: center;
+		}
+
+		p img{
+			height: 70px;
+			transform: translateY(40%);
+		}
+
+		/*button:hover{
+			transform: rotate(-45deg);
+		}*/
+
+		ul{
+			list-style-type: none;
+			display: flex;
+			justify-content: space-between;
+			background: lightgreen;
+			height: 50px;
+			line-height: 45px;
+			position: sticky;
+			top: 100px;
+			width: 100%;
+			z-index: 45;
+		}
+	</style>
+</head>
+<body>
+
+	<div id="boites">
+		<div id="boite1"></div>
+		<div id="boite2"></div>
+		<div id="boite3"></div>
+	</div>
+
+	<ul>
+		<li>Accueil</li>
+		<li>Formations</li>
+		<li>COmpetences</li>
+		<li>CONTACT</li>
+	</ul>
+	<div id="global">
+		<div id="entete">
+			<img src="../images/profil.png">
+		</div>
+
+		<form action="">
+			<h4>CREATE ACCOUNT</h4>
+			<input type="text" placeholder="YOUR NAME">
+			<input type="email" placeholder="EMAIL">
+			<input type="password" placeholder="PASSWORD">
+			<input type="tel" placeholder="PHONE">
+
+			<button type="submit">SING UP</button>
+		</form>
+	</div>
+
+	<p>designed by <img src="../images/freepik.png" alt=""></p>
+</body>
+</html>
