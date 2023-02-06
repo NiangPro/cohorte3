@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Flexbox ou boite flexible</title>
+	<style>
+		
+			#boites{
+				border: 1px solid #000;
+				width: 800px;
+				height: 500px;
+				display: flex;
+				flex-direction: row-reverse;
+				row-gap: 10px;
+/*				column-gap: 15px;*/
+				justify-content: space-between;
+				flex-wrap: wrap;
+			}
+
+			.boite{
+				width: 200px;
+				height: 200px;
+				border: 1px solid #000;
+				font-size: 73px;
+			}
+			.cards{
+				border: 1px solid #000;
+				width: 800px;
+				height: 400px;
+				margin: auto;
+				margin-bottom: 10px;
+				display: flex;
+				flex-wrap: wrap;
+				column-gap: 10px;
+			}
+			.card{
+				width: 390px;
+				height: 190px;
+				border: 1px solid #000;
+			}
+
+			.card:hover{
+				background: #000;
+			}
+
+			#cards:hover{
+				background: #000;
+			}
+
+			#test{
+				width: 200px;
+				height: 200px;
+				border: 1px solid #000;
+			}
+
+			#test:hover{
+				background: #000;
+			}
+	</style>
+
+</head>
+<body>
+
+	<div id="test">
+		
+	</div>
+	<div class="cards">
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+		<div class="card"></div>
+	</div>
+	<div id="boites">
+		<div class="boite">1</div>
+		<div class="boite">2</div>
+		<div class="boite">3</div>
+		<div class="boite">4</div>
+		<div class="boite">5</div>
+	</div>
+</body>
+</html>
