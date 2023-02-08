@@ -1,3 +1,15 @@
+Mercredi 08 Fevrier 2023
+        chemin ----> /css/
+               - revisiongeneral.html
+        chemin ----> /bootstrap/
+               - bootstrap.html
+               - offline.html
+        chemin ----> /assets/
+               - bootstrap.min.css
+               - bootstrap.min.css.map
+               - bootstrap.min.js
+               - bootstrap.min.js.map
+               - jquery.min.js
 Lundi 06 Fevrier 2023
        chemin ----> /exos/
                - exo2formulaire.html
