@@ -10,13 +10,18 @@
     
 
     <script>
-        let prenom, nom = "Diallo", age = 13;
+        let prenom, nom = "Diallo", age = 13, val1 =5.8, val2 = 19;
         const PI = 3.14;
         prenom = prompt("Entrer votre prenom ")
 
         alert(typeof prenom);
         // document.write('Prenom : '+prenom+' ET nom :'+nom);
-        document.write(`Prenom : ${prenom} et pI : ${PI}`);
+        document.write(`Prenom : ${prenom} et pI : ${PI} <br>`);
+
+        //ParseInt et ParseFloat
+        document.write(parseInt(val1)+"<br>");
+        document.write(parseFloat(val2));
+
     </script>
 </body>
 </html>
