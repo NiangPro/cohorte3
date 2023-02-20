@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch -  cas</title>
+</head>
+<body>
+    <script>
+
+        let choix = prompt(`
+                ******************* MENU ***************** <br>
+                1-------> Solde 
+                2-------> Transfert 
+                3-------> Paiement 
+                4-------> Facture 
+                5-------> Options 
+                Faites votre choix 
+        `);
+
+        switch(choix){
+            case "1":
+                alert("Vous avez consulte votre compte")
+                break;
+            case "2": 
+                alert("Transfert avec succes");
+                break;
+            default: 
+            alert("Choix indisponible");
+            break;
+        }
+    </script>
+</body>
+</html>
