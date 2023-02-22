@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correction de l'exercice sur le selon cas</title>
+</head>
+<body>
+    <script>
+        let choix = prompt(`
+            ******************* MENU PRINCIPAL ****************
+            1- SPORTS
+            2- COULEUR
+            3- MUSIQUE
+            FAITES VOTRE CHOIX !
+        `);
+
+        switch(choix){
+            case '1':
+                choix = prompt(`
+                    ************************* SPORTS *************
+                    a- Football
+                    b- Basketball
+                    Faites votre choix !
+                `);
+                switch (choix) {
+                    case 'a':
+                        choix = prompt(`
+                            *************** FOOTBALL *************
+                            1- HOMME 
+                            2- FEMME 
+                            FAITES VOTRE CHOIX !
+                        `);
+                        switch (choix) {
+                            case '1':
+                                alert("Vous avez choisi Homme")
+                                break;
+                            case '2': 
+                                alert("Vous avez choisi FEMME")
+                                break;
+                            default:
+                                alert("Choix indisponible !");
+                                break;
+                        }
+                        break;
+                    case 'b': 
+                        alert("Vous avez choisi le Basketball")
+                        break;
+                    default:
+                        alert("Choix indisponible !");
+                        break;
+                }
+                break;
+            case '2': 
+                choix = prompt(`
+                    ************** COULEUR ******************
+                    1- VERT
+                    2- ORANGE
+                    FAITES VOTRE CHOIX !
+                `);
+                switch (choix) {
+                    case '1':
+                        alert('Vous avez  choisi la couleur verte')
+                        break;
+                    case '2':
+                        alert('Vous avez  choisi la couleur orange')
+                        break;
+                    default:
+                        alert("Choix indisponible !");
+                        break;
+                }
+                break;
+            case '3': 
+                choix = prompt(`
+                    *********** MUSIQUE ****************
+                    a- Mbalaax
+                    b- Reggae
+                    FAITES VOTRE CHOIX !
+                `);
+                switch (choix) {
+                    case 'a':
+                        alert('Vous avez choisi mbalaax');
+                        break;
+                    case 'b':
+                        alert('Vous avez choisi reggae');
+                        break;
+                    default:
+                        alert("Choix indisponible !");
+                        break;
+                }
+                break;
+            default: 
+                alert("Choix indisponible !");
+                break;
+        }
+    </script>
+</body>
+</html>
