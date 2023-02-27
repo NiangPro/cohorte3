@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Correction de l'exercice sur nombre parfait et premier</title>
+</head>
+<body>
+    <script>
+        let cpt=0, somme = 0, i=1,nombre;
+
+        // let nombre = parseInt(prompt("Veuillez saisir un nombre positif"));
+        // while (nombre <= 0) {
+        //     nombre = parseInt(prompt("Veuillez entrer un nombre positif"))
+        // }
+
+        do{
+            nombre = parseInt(prompt("Veuillez saisir un nombre positif"));
+        }while(nombre <= 0);
+
+        // for(let i =1; i<nombre;i++){
+        //     if(nombre % i === 0){
+        //         cpt++;
+        //         somme =somme + i;
+        //     }
+        // }
+
+        while(i<nombre){
+            if (nombre %i == 0) {
+                cpt++;
+                somme += i;
+            }
+            i++;
+        }
+
+        if(cpt === 1 || nombre == 1)
+            document.write(nombre+" est un nombre premier<br>");
+        else
+            document.write(nombre+" n'est pas un nombre premier<br>");
+
+        if(somme === nombre)
+            document.write(nombre+" est un nombre parfait");
+        else
+            document.write(nombre+" n'est pas un nombre parfait<br>");
+
+
+    </script>
+</body>
+</html>

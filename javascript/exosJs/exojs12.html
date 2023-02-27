@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somme chiffre</title>
+</head>
+<body>
+    <script>
+        let val, som = 0;
+
+        do{
+            val = parseInt(prompt("Veuiller saisir un entier positif svp !"));
+        }while(val<=0);
+
+        let quotient = val;
+
+        while (quotient != 0) {
+            som += (quotient % 10);
+            quotient = parseInt(quotient /10);
+        }
+
+        document.write("La somme des chiffres de "+val+" est de "+som);
+    </script>
+</body>
+</html>
