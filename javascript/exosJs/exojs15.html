@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Equation second degre</title>
+</head>
+<body>
+    <script>
+        function equation(a, b, c)
+        {
+             let delta = Math.pow(b, 2) - (4*a*c);
+                let signe = b>=0 ? "+" : "";
+
+                document.write(a+"x<sup>2</sup>"+signe+b+"x"+c+" = 0<br>");
+                if (delta < 0) {
+                    document.write("Pas de solution")
+                }else if(delta == 0){
+                    let x0 = (-b)/(2*a);
+
+                    document.write("S = {"+xo+"}");
+                }else{
+                    let x1 = (-b-Math.sqrt(delta))/ (2*a);
+                    let x2 = (-b+Math.sqrt(delta))/ (2*a);
+
+                    document.write("S={"+x1+"; "+x2+"}")
+                }
+        }
+
+        let val1 = parseInt(prompt("Veuillez entrer la valeur de a"));
+        let val2 = parseInt(prompt("Veuillez entrer la valeur de b"));
+        let val3 = parseInt(prompt("Veuillez entrer la valeur de c"));
+
+        equation(val1, val2, val3);
+    </script>
+</body>
+</html>

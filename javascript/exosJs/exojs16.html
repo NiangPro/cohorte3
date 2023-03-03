@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comparaison entre trois nombres</title>
+</head>
+<body>
+    <script>
+        const comparaison = (a, b, c) =>{
+            let max , min, moy;
+
+            if (a>=b) {
+                if (b>= c) {
+                    max = a;
+                    moy = b;
+                    min = c;
+                }else{
+                    if(a>=c){
+                        max = a;
+                        moy = c;
+                        min= b;
+                    }else{
+                        max = c;
+                        moy = a;
+                        min = b;
+                    }
+                }
+            }else{
+                if(a>=c){
+                    max = b;
+                    moy = a;
+                    min = c;
+                }else{
+                    if(b>= c){
+                        max = b;
+                        moy = c;
+                        min = a;
+                    }else{
+                        max = c;
+                        moy = b;
+                        min = a;
+                    }
+                }
+            }
+
+            document.write(max + ">= "+moy+" >= "+min);
+        }
+
+        let a = parseInt(prompt("Entrer la premiere valeur"));
+        let b = parseInt(prompt("Entrer la deuxieme valeur"));
+        let c = parseInt(prompt("Entrer la troisieme valeur"));
+
+        comparaison(a, b, c);
+    </script>
+</body>
+</html>
