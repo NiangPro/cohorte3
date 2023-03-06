@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Numero telephone valid</title>
+</head>
+<body>
+    <script>
+        const estValide = (tel)=>{
+
+            let trouve = false;
+            for (let i = 0; i < tel.length; i++) {
+                if (tel[i] != 0 && tel[i] != 1 && tel[i] != 2 && tel[i] != 3 && tel[i] != 4 && tel[i] != 5 && tel[i] != 6 && tel[i] != 7 && tel[i] != 8 &&  tel[i] != 9) {
+                    trouve = true;
+                    break;
+                }
+                
+            }
+
+            if(trouve == true){
+                document.write(tel+" devrait comporter uniquement des chiffres");
+            }else{
+                if(tel.length == 9){
+                    if(tel.startsWith("33") || tel.startsWith("70") ||tel.startsWith("75") ||tel.startsWith("76") ||tel.startsWith("77") ||tel.startsWith("78")){
+                        document.write(tel +" est un numero valide");
+                    }else{
+                        document.write(tel+" devrait commencer par (33, 70, 75, 76, 77 ou 78)");
+                    }
+                }else{
+                    document.write("La taille d'un numero valide est de 9 chiffres")
+                }
+            }
+        }
+
+        let numero = prompt("Entrer un numero de telephone");
+
+        estValide(numero);
+    </script>
+</body>
+</html>

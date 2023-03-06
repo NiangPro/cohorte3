@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LEs chaines de caracteres</title>
+</head>
+<body>
+    <script>
+        let chaines = "Ma premiere chaine de caracteres";
+
+        let prenom = "bassirou", nom= " Diop ";
+        let tel = "777505050";
+
+
+        document.write(chaines.length);
+        document.write(chaines[chaines.length-1]);
+        document.write(chaines.charAt(4));
+
+        prenom = prenom.concat(" ",nom);
+
+        // prenom += " "+ nom;
+
+        document.write(prenom);
+
+        // startsWith() Verifie si la chaine commence par la chaine en parametre.
+        if(tel.startsWith("77")){
+            document.write("Vous utilisez l'operateur orange <br>")
+        }else{
+            document.write("Vous utilisez d'autres operateur <br>")
+        }
+        
+        // endWith() Verifie si la chaine termine par la chaine en parametre.
+        nom.endsWith("op") ? document.write("Nom correct") : document.write("Nom incorrect");
+
+        // padEnd() complete la chaine en fin de position par le caractere en parametre
+        document.write(nom.padEnd(10, "."))
+
+        // padStart() complete la chaine au debut de position par le caractere en parametre
+        document.write(nom.padStart(10, "."))
+        nom = nom.trim()
+
+        // length donne la taille d'une chaine.
+        document.write(nom.length)
+
+        // repeat() repete une chaine n fois la valeur en parametre.
+        document.write(nom.repeat(5))
+
+        // replace() Remplace une la premiere chaine trouvée
+        document.write(chaines.replace("a", "e"));
+
+        // replaceAll() Remplace toute les chaine trouvées
+        document.write(chaines.replaceAll("a", "e"));
+
+        // toUpperCase() Convertir une chaine majuscule
+        document.write(chaines.toUpperCase())
+
+        // toUpperCase() Convertir une chaine miniscule
+        document.write(chaines.toLowerCase())
+
+        for (let i = 0; i < chaines.length; i++) {
+            document.write(chaines[i]+"-") 
+        }
+
+
+
+    </script>
+</body>
+</html>
