@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les tableaux</title>
+</head>
+<body>
+    <script>
+        let tab = ["alioune", 23, "fatick"];
+
+        let entiers = Array(23, -5, 9, 0, 24);
+
+        alert(tab.at(0).charAt(tab[0].length -1));
+
+        // matrice 
+        let matrice = [
+            ['dia', 12, 1.5, 'a'],
+            [5, 'bleu', 'jaune', 10],
+            ['vert', 'blanc', 100, -6]
+        ];
+
+        // tab.forEach(val=>document.write(val+"<br>"))
+        
+        // tab.forEach((val, indice) => {
+        //     document.write(indice +"=>"+val+"<br>")
+        // })
+
+        tab.forEach(function(val, indice){
+            document.write(val+"<br>")
+        })
+
+        for (let i = 0; i < entiers.length; i++) {
+            document.write(entiers[i]+"<br>")
+            
+        }
+    </script>
+</body>
+</html>

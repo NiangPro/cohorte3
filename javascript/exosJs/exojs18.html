@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voyelles</title>
+</head>
+<body>
+    <script>
+        function voyelle(chaine){
+            let cpt =0;
+            let chaineMin = chaine.toLowerCase();
+            for(let i=0; i<chaineMin.length; i++){
+                if(chaineMin.charAt(i)=='a' || chaineMin.charAt(i)=='e' || chaineMin.charAt(i)=='i' || chaineMin.charAt(i)=='o' || chaineMin.charAt(i)=='u' || chaineMin.charAt(i)=='y')
+                cpt++;
+            }
+            alert("Le nombre de voyelles dans '"+ chaine +"' est: "+ cpt);
+        }
+
+        let val = prompt("Veuiller saisir une chaine svp !");
+        voyelle(val);
+    </script>
+</body>
+</html>
