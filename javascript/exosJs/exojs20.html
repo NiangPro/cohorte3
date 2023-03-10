@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saisi d'une matrice</title>
+</head>
+<body>
+    <script>
+        let matrice = [];
+
+        // saisi de la matrice 
+        for (let ligne = 0; ligne < 3; ligne++) {
+            let tab = [];
+            for (let colonne = 0; colonne < 4; colonne++) {
+                tab.push(parseInt(prompt("Veuillez entrer la valeur de ligne "+(ligne+1)+" et la colonne "+(colonne +1))))
+            }
+            matrice.push(tab);
+        }
+
+        // traitement et affichage des nombres parfaits 
+        document.write("La liste de tous les nombres parfaits <br>");
+
+        // for (let i = 0; i < matrice.length; i++) {
+        //     for (let j = 0; j < matrice[i].length; j++) {
+        //         let som = 0;
+        //         for (let k = 1; k < matrice[i][j]; k++) {
+        //             if(matrice[i][j] % k == 0)
+        //             som += i;
+        //         }
+        //     }
+        //     if(matrice[i][j] == som)
+        //         document.write(matrice[i][j] + " ")
+        // }
+
+        matrice.forEach(tab => tab.forEach(val =>{
+            let som = 0;
+            for (let i = 1; i < val; i++) 
+                if(val % i == 0)
+                    som += i;
+            if(val == som)
+                document.write(val + " ")
+        }))
+    </script>
+</body>
+</html>

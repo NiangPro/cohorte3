@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tri decroissant d'un tableau</title>
+</head>
+<body>
+    <script>
+        let tab = [100, -5, 10, 80, -100];
+
+        tab.sort((a, b)=> b - a).forEach(val => document.write(val+" "));
+        // tab.reverse();
+
+        // tab.forEach(val => document.write(val+" "))
+
+        const tri = (tab)=>{
+            if(tab.length == 0){
+                alert("Entrer un tableau qui contient des valeurs");
+            }else{
+                for (let i = 0; i < tab.length; i++) {
+                    for (let j = i+1; j < tab.length; j++) {
+                        if (tab[j] >= tab[i]) {
+                            let tmp = tab[i];
+                            tab[i] = tab[j];
+                            tab[j] = tmp;
+                        }
+                    }
+                    
+                }
+
+                tab.forEach(val => document.write(val +" "))
+            }
+        }
+
+        tri(tab)
+    </script>
+</body>
+</html>
