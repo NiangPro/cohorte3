@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .perso{
+            font-size: 34px;
+            color: aquamarine;
+        }
+
+        .milieu{
+            box-shadow: 5px 5px 5px #ccc;
+            background-color: pink;
+        }
+
+        .avance{
+            border: 1px solid #000;
+            border-radius: 20px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <p id="para" class="avance">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa quasi, voluptate praesentium natus minus dolore possimus laboriosam expedita hic voluptates debitis facere? Voluptates rerum alias facilis corrupti quam corporis voluptatibus architecto dolorem soluta. Blanditiis voluptate pariatur sit inventore sunt quam.</p>
+    <a href="" id="lien">Sunucode</a>
+    <script>
+        let lien = document.getElementById('lien')
+        let para = document.getElementById("para")
+
+        // para.className = "perso";
+
+        let tabclass = para.className.split(" ");
+
+        tabclass.push("perso", "milieu");
+
+        para.className = tabclass.join(" ")
+        // let classes = para.className
+
+        lien.href = "https://www.sunucode.com"
+        lien.target = "_blank"
+    </script>
+</body>
+</html>
