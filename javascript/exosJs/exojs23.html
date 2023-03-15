@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manipulation de html</title>
+    <style>
+        .p1{
+            background: green;
+        }
+
+        .p2{
+            background: orange;
+        }
+
+        .myclass{
+            color: green;
+            font-size: 42px;
+        }
+    </style>
+</head>
+<body>
+    <p class="p1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias magni totam ullam explicabo dolore repudiandae, quibusdam aut atque, perspiciatis cumque aliquid asperiores natus deleniti eos veritatis hic corrupti dicta recusandae?</p>
+    <p class="p2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias magni totam ullam explicabo dolore repudiandae, quibusdam aut atque, perspiciatis cumque aliquid asperiores natus deleniti eos veritatis hic corrupti dicta recusandae?</p>
+    <script>
+        let p2 = document.getElementsByClassName("p2");
+
+        let tabclass = p2[0].className.split(" ");
+        tabclass.push("myclass");
+
+        p2[0].className = tabclass.join(" ");
+    </script>
+</body>
+</html>

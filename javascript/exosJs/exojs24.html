@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tableau </title>
+</head>
+<body>
+    <div id="global">
+
+    </div>
+    <script>
+        let global = document.getElementById("global");
+
+        let table = document.createElement("table");
+        table.border = "1";
+        table.style.borderCollapse = "collapse";
+        
+        global.appendChild(table);
+        let ligne = document.createElement("tr");
+
+        table.appendChild(ligne);
+        for (let i = 1; i <= 5; i++) {
+            let col = document.createElement("td");
+            col.appendChild(document.createTextNode("Colonne "+i)) 
+            ligne.appendChild(col)
+        }
+    </script>
+</body>
+</html>

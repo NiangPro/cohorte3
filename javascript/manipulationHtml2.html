@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>manipulationHtml2</title>
+    <style>
+        .myclass{
+            text-decoration: none;
+            color: orange;
+            font-size: 49px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div><a href="">Google <span id="span">est un moteur de recherche</span></a>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing.</p>
+        <strong>Texte en gras</strong></div>
+
+    <script>
+        let span = document.getElementById("span");
+        let lien = span.parentNode;
+        let div = span.parentNode.parentNode;
+
+        let para = div.firstChild.nextSibling.nextSibling;
+
+        let titre = document.createElement("h1");
+        let titrecontent = document.createTextNode("Mon titre de niveau 1");
+        titre.appendChild(titrecontent);
+        div.appendChild(titre);
+
+        let link = document.createElement("a");
+
+        link.appendChild(document.createTextNode("Cliquez pour surfer sur youtube"));
+        link.href = "https://youtube.com";
+        link.target = "_blank";
+        link.className = "myclass";
+        div.appendChild(link)
+
+        console.log(para);
+
+        console.log(lien.nextSibling.nextSibling.innerText);
+
+        console.log(span.parentNode.parentNode.firstChild.innerHTML);
+    </script>
+</body>
+</html>
