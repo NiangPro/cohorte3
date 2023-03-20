@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les formulaires en javascript</title>
+</head>
+<body>
+    <form action="">
+        <label for="">Prenom</label><br>
+        <input type="text" name="prenom" id="prenom" ><br>
+        <label for="">Nom</label><br>
+        <input type="text" name="nom" id="nom" required><br>
+        <label for="">Sexe</label><br>
+        Masculin <input type="radio" value="masculin" name="sexe" checked>
+        Feminin <input type="radio" value="feminin" name="sexe"> <br>
+        <label for="">Pays</label><br>
+        <select name="pays" id="pays">
+            <option value="">Selectionner un pays</option>
+            <option value="Senegal">Senegal</option>
+            <option value="Gambie">Gambie</option>
+            <option value="Mali">Mali</option>
+            <option value="Bresil">Bresil</option>
+        </select> <br><br>
+        <button type="submit" id="add">Ajouter</button>
+        <button type="reset">
+            Annuler
+        </button>
+    </form>
+
+    <script>
+        let  prenom = document.getElementById("prenom");
+        let nom = document.getElementById("nom");
+        let btn = document.getElementById("add");
+        let sexes = document.getElementsByName("sexe");
+        let pays = document.getElementById("pays");
+
+        btn.disabled = true;
+
+        prenom.value = "Bassirou";
+
+        prenom.readOnly = true;
+        // prenom.disabled = true;
+
+        nom.addEventListener("mouseleave", function(e){
+            // console.log(e.target.value);
+            // console.log(prenom.value);
+
+            if (nom.value.length > 0) {
+                console.log(nom.value);
+                btn.disabled = false;
+            }else{
+                btn.disabled = true;
+            }
+
+
+        })
+
+        btn.addEventListener("click",function(e){
+                console.log("Prenom : " +prenom.value);
+                for (let i = 0; i < sexes.length; i++) {
+                    if(sexes[i].checked == true){
+                        console.log("Sexe : "+sexes[i].value);
+                    }
+                }
+
+                console.log("Pays : "+pays.options[pays.selectedIndex].value);
+                e.preventDefault();
+        })
+    </script>
+</body>
+</html>

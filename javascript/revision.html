@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const decalageDunRang = (tableau) =>{
+            let tmp = tableau[tableau.length - 1];
+
+            for (let i = tableau.length -1; i >= 0 ; i--) {
+                tableau[i] = tableau[i-1];
+            }
+
+            tableau[0] = tmp;
+
+            return tableau;
+        }
+
+        const decalageKRang = (tableau, k) => {
+            document.write("<br>Affichage avant decalage <br>")
+            tableau.forEach(element => document.write(element+ " "));
+
+            for (let i = 1; i <= k; i++) {
+                tableau = decalageDunRang(tableau);
+            }
+            
+            document.write("<br>Decalage de "+k+" rang<br>");
+            tableau.forEach(element => document.write(element+ " "));
+        }
+
+        let taille  = parseInt(prompt("Entrer la taille du tableau"));
+
+        let tab = [];
+        for (let i = 0; i < taille; i++) {
+            tab.push(prompt("Entrer la valeur de la colonne "+(i+1)))           
+        }
+
+        let k = parseInt(prompt("Entrer le nombre de fois qu'on va decaler"))
+
+        decalageKRang(tab, k);
+    </script>
+</body>
+</html>
