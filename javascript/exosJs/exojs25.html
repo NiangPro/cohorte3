@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulaire</title>
+</head>
+<body>
+    <form action="">
+        <label for="">Prenom</label> <br>
+        <input type="text" name="" id="prenom"> <br><br>
+
+        <label for="">Nom</label> <br>
+        <input type="text" name="" id="nom"> <br><br>
+
+        <label for="">Sexe</label> <br>
+        Masculin <input type="radio" name="sexe" checked> &nbsp; &nbsp;
+        Feminin <input type="radio" name="sexe" > <br><br>
+
+        <select name="" id="select">
+            <option value="">Selectionner un pays</option>
+            <option value="senegal">Senegal</option>
+            <option value="Mali">Mali</option>
+            <option value="Gabon">Gabon</option>
+        </select>
+        <br><br>
+
+        <input type="submit" value="Ajouter" id="valider"> &nbsp; 
+        <input type="reset" value="Annuler" id="annuler">
+    </form>
+    <script>
+        let prenom = document.getElementById("prenom");
+        prenom.value ="Alioune"
+        prenom.readOnly = true;
+
+        let nom = document.getElementById("nom");
+        let pays = document.getElementById("select");
+        let btn = document.getElementById("valider");
+
+        btn.disabled = true;
+
+        nom.addEventListener("change", function(e){
+            if(nom.value !="" && pays.selectedIndex != 0)
+                btn.disabled = false;
+            else{
+                btn.disabled = true;
+            }
+        })
+
+        pays.addEventListener("change", function(e){
+            console.log(pays.option);
+            if(pays.selectedIndex != 0 && nom.value !=""){
+                btn.disabled = false;
+            }else{
+                btn.disabled = true;
+            }
+        })
+
+    </script>
+</body>
+</html>
