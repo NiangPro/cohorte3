@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion du temps</title>
+</head>
+<body>
+    <script>
+        let date = new Date();
+
+        let jours = ['Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi', 'Dimanche'];
+        let mois = ['Janvier', 'Fevrier', 'Mars','Avril','Mai', 'Juin', 'Juillet', 'Aout', 'Septembre', 'Octobre', 'Novembre', 'Decembre'];
+        
+        let currentDay = '', currentMonth = '';
+
+        jours.forEach((jour , index) =>{
+            if(index == date.getDay() -1){
+                currentDay =  jour;
+            }
+        })
+
+        mois.forEach((m, index)=>{
+            if(index == date.getMonth()){
+                currentMonth = m;
+            }
+        })
+
+
+        let sd = new Date();
+
+        document.write(currentDay+" "+date.getDate()+" "+currentMonth+" "+date.getFullYear())
+        let ed = new Date();
+
+        setTimeout(()=>{
+            alert("Bonjour tout le monde")
+        }, 2000)
+
+        let i = 0;
+        let ci = setInterval(function(){
+            i++;
+            console.log(i);
+
+            if(i == 10){
+                clearInterval(ci)
+            }
+        }, 1000)
+    </script>
+</body>
+</html>
